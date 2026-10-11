@@ -1,22 +1,37 @@
 # Day 1 — Quantum Computing Foundations
 
 ## Objective
-Understand basic quantum computing concepts and implement foundational quantum circuits using Qiskit.
+Build and test foundational quantum circuits using Python, Qiskit, and Qiskit Aer.
 
-## Learning Checklist
-- [ ] Set up and test Qiskit and Qiskit Aer.
-- [ ] Understand qubits, basis states, superposition, and measurement.
-- [ ] Explore the X, H, Z, S, and T gates.
-- [ ] Build and test a Bell-state circuit.
-- [ ] Build and test a three-qubit GHZ-state circuit.
-- [ ] Analyze measurement counts and validate results with assertions.
-- [ ] Document experiments and reflections.
+## Topics Practiced
+- Qubits, computational basis states, and measurement
+- Superposition and state-vector probabilities
+- X, H, Z, S, and T gates
+- Controlled operations using CNOT
+- Bell-state and three-qubit GHZ-state circuits
+- Circuit diagrams, repeated measurements, and debugging
+- Assertions for validating simulation results
+
+## Experiments
+- Tested a qubit without a gate and with the X gate.
+- Applied the Hadamard gate and explored measurement statistics.
+- Examined state vectors and calculated probabilities from amplitudes.
+- Built and simulated Bell and GHZ circuits.
+- Tested GHZ circuit variations and compared measurement counts.
+- Used assertions to check expected outcomes.
 
 ## Tools
-Python, Qiskit, Qiskit Aer, and Google Colab.
+- Python
+- Qiskit
+- Qiskit Aer
+- Google Colab
+- GitHub
 
 ## Notebook
-The Day 1 learning notebook will be stored in this directory.
+[Day01_Quantum_Computing_Foundations.ipynb](Day01_Quantum_Computing_Foundations.ipynb)
 
-## Learning Notes
-Experiment results, explanations, questions, and reflections will be documented here as the work is completed.
+## Reflection
+Day 1 focused on connecting quantum concepts with code and simulation. The experiments helped explore how gates affect measurement outcomes, how entangled circuits produce correlated results, and how repeated simulations can vary in their counts.
+
+## Next Step
+Continue with the next scheduled learning block only after reviewing and consolidating today's foundations.
