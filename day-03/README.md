@@ -8,10 +8,11 @@
 
 ## Experiments Completed
 - [x] Tested all four CNOT basis-state inputs.
-- [x] Prepared the Bell state \(|\Phi^+\rangle\).
-- [x] Prepared the Bell state \(|\Phi^-\rangle\).
+- [x] Prepared and measured all four Bell states.
 - [x] Verified phase-sensitive measurement outcomes using Qiskit.
+- [x] Implemented quantum teleportation with conditional corrections.
+- [x] Compared Bob's measurement statistics with theoretical probabilities.
+- [x] Tested teleportation using different input states and measurement bases.
 
-## Next Step
-Add the completed notebook: `Day03_Entanglement_Bell_States.ipynb`.
-
+## Notebook
+Completed notebook: [`Day03_Entanglement_Bell_States.ipynb`](Day03_Entanglement_Bell_States.ipynb)
