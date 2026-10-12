@@ -19,9 +19,10 @@ Build a strong understanding of quantum computing through consistent study, codi
 
 | Milestone | Status |
 |---|---|
-| Day 1 — Foundations and quantum circuits | ✅ Complete |
-| Day 2 — Single-qubit gates | ✅ Complete |
-| Day 3 — Entanglement and Bell states | ✅ Complete |
+| [Day 1 — Foundations and quantum circuits](day-01/Day01_Quantum_Computing_Foundations.ipynb) | ✅ Complete |
+| [Day 2 — Single-qubit gates](day-02/Day02_Single_Qubit_Gates.ipynb) | ✅ Complete |
+| [Day 3 — Entanglement and Bell states](day-03/Day03_Entanglement_Bell_States.ipynb) | ✅ Complete |
+
 
 ## 🛠️ Tools
 
