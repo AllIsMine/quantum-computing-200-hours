@@ -33,11 +33,16 @@ Build a strong understanding of quantum computing through consistent study, codi
 ## 📂 Repository Structure
 
 ```text
+```text
 quantum-computing-200-hours/
 ├── README.md
-└── day-01/
-    ├── Day01_Quantum_Computing_Foundations.ipynb
+├── day-01/
+│   ├── Day01_Quantum_Computing_Foundations.ipynb
+│   └── README.md
+└── day-02/
+    ├── Day02_Single_Qubit_Gates.ipynb
     └── README.md
+```
 ```
 
 ## 🧪 Learning Philosophy
