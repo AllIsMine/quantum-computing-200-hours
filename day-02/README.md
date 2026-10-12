@@ -12,7 +12,7 @@
 - [x] Hadamard gate
 - [x] Pauli-X gate
 - [x] H → Z → H
-- [ ] X → X
+- [x] X → X
 
 ## Notebook
 Day02_Single_Qubit_Gates.ipynb
