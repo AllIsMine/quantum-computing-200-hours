@@ -34,7 +34,6 @@ Build a strong understanding of quantum computing through consistent study, codi
 ## 📂 Repository Structure
 
 ```text
-## 📂 Repository Structure
 quantum-computing-200-hours/
 ├── README.md
 ├── day-01/
