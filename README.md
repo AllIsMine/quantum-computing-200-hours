@@ -21,6 +21,7 @@ Build a strong understanding of quantum computing through consistent study, codi
 |---|---|
 | Day 1 — Foundations and quantum circuits | ✅ Complete |
 | Day 2 — Single-qubit gates | ✅ Complete |
+| Day 3 — Entanglement and Bell states | ✅ Complete |
 
 ## 🛠️ Tools
 
@@ -33,17 +34,20 @@ Build a strong understanding of quantum computing through consistent study, codi
 ## 📂 Repository Structure
 
 ```text
-```text
+## 📂 Repository Structure
 quantum-computing-200-hours/
 ├── README.md
 ├── day-01/
 │   ├── Day01_Quantum_Computing_Foundations.ipynb
 │   └── README.md
-└── day-02/
-    ├── Day02_Single_Qubit_Gates.ipynb
+├── day-02/
+│   ├── Day02_Single_Qubit_Gates.ipynb
+│   └── README.md
+└── day-03/
+    ├── Day03_Entanglement_Bell_States.ipynb
     └── README.md
 ```
-```
+
 
 ## 🧪 Learning Philosophy
 
