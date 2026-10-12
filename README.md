@@ -20,7 +20,7 @@ Build a strong understanding of quantum computing through consistent study, codi
 | Milestone | Status |
 |---|---|
 | Day 1 — Foundations and quantum circuits | ✅ Complete |
-| Day 2 — Single-qubit gates | 🟡 In progress |
+| Day 2 — Single-qubit gates | ✅ Complete |
 
 ## 🛠️ Tools
 
