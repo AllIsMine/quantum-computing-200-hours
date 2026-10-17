@@ -2,59 +2,74 @@
 
 ## Overview
 
-This practical exercise implements a two-qubit example of Grover's quantum search algorithm using Qiskit and Qiskit Aer.
+This exercise implements a two-qubit example of Grover's quantum search algorithm using Qiskit and Qiskit Aer. It demonstrates how an oracle marks a target state and how a diffusion operator amplifies its amplitude.
 
-The circuit searches for the target computational basis state `11`. It demonstrates how an oracle marks a target state and how a diffusion operation amplifies its amplitude.
+Two target states are tested: `11` and `10`. Both experiments use an ideal simulator and 1,000 shots.
 
 ## Learning Objectives
 
-- Understand the purpose of a quantum search algorithm.
 - Prepare an equal superposition of two qubits.
 - Implement a phase oracle using a controlled-Z gate.
-- Construct the diffusion operation.
-- Measure the circuit using Qiskit Aer.
-- Validate the observed result with a simple assertion.
+- Modify the oracle to search for a different target state.
+- Construct and apply the diffusion operator.
+- Simulate quantum circuits using Qiskit Aer.
+- Validate measurement results with Python assertions.
+- Understand qubit indexing, measurement output, and simulator limitations.
 
 ## Algorithm Workflow
 
-1. **Superposition:** Apply Hadamard gates to both qubits to prepare four equally weighted basis states.
-2. **Oracle:** Apply a controlled-Z gate to mark the target state `11` through a phase change.
-3. **Diffusion:** Apply the diffusion operation to amplify the target state's amplitude.
+1. **Superposition:** Apply Hadamard gates to both qubits to prepare an equal superposition of the four computational basis states.
+2. **Oracle:** Mark the target state by applying a phase change. For target `11`, a controlled-Z gate is used directly. For target `10`, X gates on qubit 0 are applied before and after the controlled-Z gate.
+3. **Diffusion:** Apply the diffusion operator to amplify the target state's amplitude.
 4. **Measurement:** Measure both qubits and inspect the output counts.
-5. **Validation:** Check that the ideal simulator returns the expected target state.
+5. **Validation:** Compare the observed counts with the expected target state using assertions.
 
-## Implementation
+## Experiments and Results
 
-The notebook is named `Day05_Grovers_Algorithm_Quantum_Search.ipynb`.
+### Experiment 1 — Target `11`
 
-It uses Python, Qiskit, and Qiskit Aer for circuit construction and simulation.
+The circuit prepares a superposition, marks `11` with a controlled-Z oracle, applies the diffusion operator, and measures both qubits.
 
-## Recorded Result
+Ideal Qiskit Aer result for 1,000 shots:
 
-The Colab simulation returned the following measurement counts over 1,000 shots:
+```text
+Measurement counts: {'11': 1000}
+Day 5 Grover's algorithm test passed!
+```
 
-\`\`\`text
-{'11': 1000}
-\`\`\`
+### Experiment 2 — Target `10`
 
-The target state `11` appeared in all 1,000 shots in this ideal simulation.
+The oracle is modified to mark `10`. An X gate is applied to qubit 0 before and after the controlled-Z gate, while the diffusion operator remains unchanged.
+
+Ideal Qiskit Aer result for 1,000 shots:
+
+```text
+Measurement counts: {'10': 1000}
+Grover target-10 test passed!
+```
 
 ## Interpretation
 
-The result demonstrates the expected behavior of this particular two-qubit circuit with one Grover iteration. It is a simulator result and should not be interpreted as a measurement from real quantum hardware.
+Both target states appeared in all 1,000 shots in their respective ideal simulations, and both assertions passed. These results demonstrate the expected behavior of these particular two-qubit circuits with one Grover iteration.
 
-## Tools
+The target-10 experiment also provided a debugging lesson: an initial oracle modification produced `01` instead of `10`. Reviewing Qiskit's qubit indexing and displayed measurement-bit order helped identify the issue and correct the oracle.
+
+## Limitations
+
+These are ideal simulator results, not measurements from real quantum hardware. Actual hardware results can vary because of noise, gate errors, and measurement errors. This small two-qubit example illustrates the mechanism of Grover's algorithm; it does not establish a practical speed advantage for large search problems.
+
+## Tools and Environment
 
 - Python
 - Qiskit
 - Qiskit Aer
 - Google Colab
-- GitHub
+- Git and GitHub
 
 ## Learning Outcome
 
-This exercise connects quantum superposition, phase marking, interference, and measurement in a small quantum search circuit.
+This exercise connects superposition, phase marking, interference, measurement, assertions, and debugging in a small quantum search circuit. It also demonstrates how changing the oracle changes the target state being searched for.
 
 ## Status
 
-Practical circuit executed successfully in Google Colab. Repository publication of the notebook and final validation are pending.
+Both target-state experiments have been implemented and validated using the ideal Qiskit Aer simulator. The notebook and this documentation are published in the repository.
