@@ -36,7 +36,7 @@ A structured, hands-on portfolio documenting my progress in quantum computing th
 | [Day 2 — Single-Qubit Gates](day-02/Day02_Single_Qubit_Gates.ipynb) | Complete | Notebook published |
 | [Day 3 — Entanglement and Bell States](day-03/Day03_Entanglement_Bell_States.ipynb) | Complete | Notebook and README published |
 | [Day 4 — Deutsch–Jozsa and Bernstein–Vazirani](Day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) | Practical exercises complete | Notebook and README published |
-| Day 5 — Grover's Algorithm and Quantum Search | In progress | Colab simulation tested; GitHub publication pending |
+| [Day 5 — Grover's Algorithm and Quantum Search](Day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) | Experiments complete | Notebook and README published |
 
 ## Day 4 — Recorded Simulator Results
 
@@ -51,19 +51,24 @@ The completed exercises recorded the following results using the ideal Qiskit Ae
 
 These are ideal simulator results, not measurements from real quantum hardware.
 
-## Day 5 — Grover's Search
+## Day 5 — Grover's Algorithm and Quantum Search
 
-**Status: In progress**
+**Status: Experiments complete; ideal simulator validation recorded.**
 
-The current two-qubit example searches for the target state `11`. The circuit combines an equal superposition, a controlled-Z oracle, and a diffusion operation.
+The Day 5 notebook implements a two-qubit example of Grover's search algorithm using Qiskit and Qiskit Aer. Two target states were tested by modifying the oracle while retaining the diffusion operation.
 
-The Colab simulation returned:
+| Experiment | Target State | Simulator Result |
+|---|---|---|
+| Experiment 1 | `11` | `{'11': 1000}` |
+| Experiment 2 | `10` | `{'10': 1000}` |
 
-```text
-{'11': 1000}
-```
+Each experiment used 1,000 simulator shots, and the corresponding assertion passed.
 
-The target state appeared in all 1,000 shots in this ideal simulation. The Day 5 notebook and its supporting documentation still need to be published to this repository.
+The second experiment also provided practical debugging experience with Qiskit qubit indexing and displayed measurement-bit ordering.
+
+These results are from ideal simulation, not real quantum hardware. This small example demonstrates the basic mechanism of Grover's algorithm; it does not establish a practical speed advantage for large search problems.
+
+See the [Day 5 README](Day-05/README.md) for the methodology, results, interpretation, and limitations.
 
 ## Tools and Environment
 
@@ -95,8 +100,6 @@ quantum-computing-200-hours/
     └── README.md
 ```
 
-*The Day-05 files will appear here after they have been published.*
-
 ## Project Workflow
 
 Each milestone follows a consistent workflow:
@@ -110,4 +113,4 @@ Each milestone follows a consistent workflow:
 
 ## About This Portfolio
 
-This repository documents a practical learning journey in quantum computing, progressing from foundational concepts to quantum algorithms and increasingly advanced experiments. Completed milestones, simulator results, and hardware experiments will be identified accurately so readers can distinguish verified work from planned work.
+This repository documents a practical learning journey in quantum computing, progressing from foundational concepts to quantum algorithms and increasingly advanced experiments. Completed milestones, simulator results, and hardware experiments are identified accurately so readers can distinguish verified work from planned work.
