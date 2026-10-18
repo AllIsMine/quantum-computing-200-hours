@@ -43,7 +43,8 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Day 4 — Deutsch–Jozsa and Bernstein–Vazirani | Practical exercises complete | [Notebook](day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) · [README](day-04/README.md) |
 | Day 5 — Grover's Algorithm and Quantum Search | Experiments complete | [Notebook](day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) · [README](day-05/README.md) |
 | Day 6 — Quantum Fourier Transform and Quantum Phase Estimation | Complete — ideal simulator checks passed | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
-| Day 7 — Simon's Algorithm | Planned | Upcoming milestone |
+| Day 7 — Simon's Algorithm | Complete | [Notebook](day-07/Day07_Simons_Algorithm.ipynb) · [README](day-07/README.md) |
+| Day 8 | Quantum Phase Estimation (QPE) | ⏳ In Progress |
 
 ## Day 1 — Quantum Computing Foundations
 
@@ -165,6 +166,30 @@ These results were obtained using an ideal simulator, not physical quantum hardw
 
 See the [Day 6 notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) and [Day 6 README](day-06/README.md).
 
+
+## Day 7 — Simon's Algorithm
+
+**Status: Complete — classical promise, oracle, and hidden-string recovery verified in simulation**
+
+Implemented Simon's algorithm for the hidden string `110` using Qiskit and Qiskit Aer.
+
+### Experiments Completed
+- Verified the classical Simon promise.
+- Constructed and tested the quantum oracle.
+- Built and simulated the complete quantum circuit.
+- Checked measurement results against the expected parity condition.
+- Recovered the hidden string `110` from the measured equations.
+
+### Results
+- Oracle test: Passed.
+- Simulator shots: 1,024.
+- Parity verification: Passed for all observed outcomes.
+- Hidden-string recovery: `110`.
+
+These results were obtained in ideal simulation, not on physical quantum hardware.
+
+See the [Day 7 notebook](day-07/Day07_Simons_Algorithm.ipynb) and [Day 7 README](day-07/README.md).
+
 ## Tools and Technologies
 
 - **Language:** Python
@@ -196,6 +221,9 @@ quantum-computing-200-hours/
 │   └── README.md
 └── day-06/
     ├── Day06_Quantum_Fourier_Transform.ipynb
+    └── README.md
+└── day-07/
+    ├── Day07_Simons_Algorithm.ipynb
     └── README.md
 ```
 
