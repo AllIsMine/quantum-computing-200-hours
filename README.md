@@ -1,4 +1,3 @@
-
 # Quantum Computing: A 200-Hour Learning Journey
 
 A structured, hands-on learning portfolio documenting my journey into quantum computing through mathematical foundations, quantum circuit programming, algorithm implementation, simulation, testing, and technical documentation.
@@ -41,8 +40,8 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Day 1 — Quantum Computing Foundations | Complete | [Notebook](day-01/Day01_Quantum_Computing_Foundations.ipynb) · [README](day-01/README.md) |
 | Day 2 — Single-Qubit Gates | Complete | [Notebook](day-02/Day02_Single_Qubit_Gates.ipynb) · [README](day-02/README.md) |
 | Day 3 — Entanglement and Bell States | Complete | [Notebook](day-03/Day03_Entanglement_Bell_States.ipynb) · [README](day-03/README.md) |
-| Day 4 — Deutsch–Jozsa and Bernstein–Vazirani | Practical exercises complete | [Notebook](Day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) · [README](Day-04/README.md) |
-| Day 5 — Grover's Algorithm and Quantum Search | Experiments complete | [Notebook](Day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) · [README](Day-05/README.md) |
+| Day 4 — Deutsch–Jozsa and Bernstein–Vazirani | Practical exercises complete | [Notebook](day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) · [README](day-04/README.md) |
+| Day 5 — Grover's Algorithm and Quantum Search | Experiments complete | [Notebook](day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) · [README](day-05/README.md) |
 | Day 6 — Quantum Fourier Transform and Quantum Phase Estimation | Complete — ideal simulator checks passed | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
 | Day 7 — Simon's Algorithm | Planned | Upcoming milestone |
 
@@ -53,7 +52,6 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 Introduced the fundamental concepts of quantum computing and began implementing quantum circuits.
 
 Topics include:
-
 - Qubits and quantum states
 - Superposition and measurement
 - Basic circuit construction
@@ -68,7 +66,6 @@ See the [Day 1 notebook](day-01/Day01_Quantum_Computing_Foundations.ipynb).
 Explored single-qubit operations and their effects on quantum states.
 
 Topics include:
-
 - Quantum gate operations
 - Hadamard transformations
 - State changes and measurement
@@ -83,7 +80,6 @@ See the [Day 2 notebook](day-02/Day02_Single_Qubit_Gates.ipynb).
 Studied entanglement and created circuits that demonstrate correlations between qubits.
 
 Topics include:
-
 - Bell-state preparation
 - Multi-qubit circuits
 - Entanglement and measurement
@@ -97,7 +93,7 @@ See the [Day 3 notebook](day-03/Day03_Entanglement_Bell_States.ipynb).
 
 Implemented introductory quantum algorithms to investigate how quantum circuits can reveal properties of functions and recover hidden bit strings.
 
-Recorded ideal Qiskit Aer simulator results included:
+Recorded ideal Qiskit Aer simulator results:
 
 | Exercise | Observed Result |
 |---|---|
@@ -106,9 +102,9 @@ Recorded ideal Qiskit Aer simulator results included:
 | Deutsch–Jozsa: balanced oracle | `001` |
 | Bernstein–Vazirani: secret string `101` | `101` |
 
-These are recorded simulator outcomes, not measurements from physical quantum hardware.
+These results came from ideal simulation, not physical quantum hardware.
 
-See the [Day 4 notebook](Day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) and [Day 4 README](Day-04/README.md).
+See the [Day 4 notebook](day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) and [Day 4 README](day-04/README.md).
 
 ## Day 5 — Grover's Algorithm and Quantum Search
 
@@ -126,7 +122,6 @@ Two target states were tested by modifying the oracle while retaining the diffus
 Each experiment used 1,000 simulator shots, and the corresponding assertion passed.
 
 The experiments provided practice with:
-
 - Oracle construction
 - Grover diffusion
 - Amplitude amplification
@@ -136,13 +131,13 @@ The experiments provided practice with:
 
 These results came from ideal simulation. This small demonstration illustrates Grover's algorithm but does not establish a practical speed advantage for large search problems.
 
-See the [Day 5 notebook](Day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) and [Day 5 README](Day-05/README.md).
+See the [Day 5 notebook](day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) and [Day 5 README](day-05/README.md).
 
 ## Day 6 — Quantum Fourier Transform and Quantum Phase Estimation
 
 **Status: Complete — QFT, inverse QFT, and QPE validated in ideal simulation**
 
-Day 6 focused on understanding quantum phase, controlled-phase operations, the Quantum Fourier Transform, its inverse, and Quantum Phase Estimation.
+Day 6 focused on quantum phase, controlled-phase operations, the Quantum Fourier Transform, its inverse, and Quantum Phase Estimation.
 
 ### Experiments Completed
 
@@ -166,11 +161,9 @@ Day 6 focused on understanding quantum phase, controlled-phase operations, the Q
 
 The QPE circuit used two counting qubits and one eigenstate qubit. In the ideal Qiskit Aer simulation, all 1,024 shots returned `01`, matching the selected phase of 0.25.
 
-### Interpretation and Limitations
+These results were obtained using an ideal simulator, not physical quantum hardware. Real hardware can produce different distributions because of noise and device limitations.
 
-The experiment demonstrates phase estimation for a phase chosen to be representable with two counting qubits. The result was obtained using an ideal simulator, not physical quantum hardware. Real hardware can produce different distributions because of noise and device limitations.
-
-See the [Day 6 notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) for the implementation and the [Day 6 README](day-06/README.md) for the detailed experiment summary.
+See the [Day 6 notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) and [Day 6 README](day-06/README.md).
 
 ## Tools and Technologies
 
@@ -195,18 +188,16 @@ quantum-computing-200-hours/
 ├── day-03/
 │   ├── Day03_Entanglement_Bell_States.ipynb
 │   └── README.md
-├── Day-04/
+├── day-04/
 │   ├── Day04_DJ_and_Bernstein_Vazirani.ipynb
 │   └── README.md
-├── Day-05/
+├── day-05/
 │   ├── Day05_Grovers_Algorithm_Quantum_Search.ipynb
 │   └── README.md
 └── day-06/
     ├── Day06_Quantum_Fourier_Transform.ipynb
     └── README.md
 ```
-
-**Note:** The folder names `Day-04`, `Day-05`, and `day-06` intentionally preserve their current capitalization. Keep these names unchanged unless you also update every affected link.
 
 ## Project Workflow
 
@@ -224,7 +215,6 @@ Each milestone follows a consistent workflow:
 The next planned milestone is Simon's algorithm, followed by further quantum-algorithm practice and deeper study of quantum information.
 
 Future milestones may include:
-
 - Simon's algorithm and hidden-bit-string recovery
 - More advanced quantum algorithms
 - Qiskit transpilation and circuit optimization
