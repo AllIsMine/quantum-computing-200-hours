@@ -6,6 +6,7 @@ This exercise implements a two-qubit example of Grover's quantum search algorith
 
 Two target states are tested: `11` and `10`. Both experiments use an ideal simulator and 1,000 shots.
 
+
 ## Learning Objectives
 
 - Prepare an equal superposition of two qubits.
