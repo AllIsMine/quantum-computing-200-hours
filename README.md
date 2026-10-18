@@ -44,7 +44,7 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Day 5 — Grover's Algorithm and Quantum Search | Experiments complete | [Notebook](day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) · [README](day-05/README.md) |
 | Day 6 — Quantum Fourier Transform and Quantum Phase Estimation | Complete — ideal simulator checks passed | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
 | Day 7 — Simon's Algorithm | Complete | [Notebook](day-07/Day07_Simons_Algorithm.ipynb) · [README](day-07/README.md) |
-| Day 8 | Quantum Phase Estimation (QPE) | ⏳ In Progress |
+| Day 8 — Quantum Phase Estimation (QPE) | In Progress | Notebook in preparation |
 
 ## Day 1 — Quantum Computing Foundations
 
@@ -219,9 +219,9 @@ quantum-computing-200-hours/
 ├── day-05/
 │   ├── Day05_Grovers_Algorithm_Quantum_Search.ipynb
 │   └── README.md
-└── day-06/
-    ├── Day06_Quantum_Fourier_Transform.ipynb
-    └── README.md
+├── day-06/
+│   ├── Day06_Quantum_Fourier_Transform.ipynb
+│   └── README.md
 └── day-07/
     ├── Day07_Simons_Algorithm.ipynb
     └── README.md
@@ -240,7 +240,7 @@ Each milestone follows a consistent workflow:
 
 ## Next Steps
 
-The next planned milestone is Simon's algorithm, followed by further quantum-algorithm practice and deeper study of quantum information.
+The next milestone is further quantum-algorithm practice, building on the completed Simon's algorithm implementation and earlier QFT and QPE experiments.
 
 Future milestones may include:
 - Simon's algorithm and hidden-bit-string recovery
