@@ -37,6 +37,7 @@ A structured, hands-on portfolio documenting my progress in quantum computing th
 | [Day 3 — Entanglement and Bell States](day-03/Day03_Entanglement_Bell_States.ipynb) | Complete | Notebook and README published |
 | [Day 4 — Deutsch–Jozsa and Bernstein–Vazirani](Day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) | Practical exercises complete | Notebook and README published |
 | [Day 5 — Grover's Algorithm and Quantum Search](Day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) | Experiments complete | Notebook and README published |
+| [Day 6 — QFT and QPE](day-06/Day06_Quantum_Fourier_Transform.ipynb) | Complete | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
 
 ## Day 4 — Recorded Simulator Results
 
@@ -95,8 +96,11 @@ quantum-computing-200-hours/
 ├── Day-04/
 │   ├── Day04_DJ_and_Bernstein_Vazirani.ipynb
 │   └── README.md
-└── Day-05/
-    ├── Day05_Grovers_Algorithm_Quantum_Search.ipynb
+├── Day-05/
+│   ├── Day05_Grovers_Algorithm_Quantum_Search.ipynb
+│   └── README.md
+└── day-06/
+    ├── Day06_Quantum_Fourier_Transform.ipynb
     └── README.md
 ```
 
