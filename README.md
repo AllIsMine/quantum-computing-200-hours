@@ -191,6 +191,36 @@ These results were obtained in ideal simulation, not on physical quantum hardwar
 
 See the [Day 7 notebook](day-07/Day07_Simons_Algorithm.ipynb) and [Day 7 README](day-07/README.md).
 
+
+## Day 8 — Advanced Quantum Phase Estimation (QPE)
+
+**Status: Complete — precision experiments, exact-phase validation, and ideal/noisy simulation comparison completed**
+
+Extended Quantum Phase Estimation (QPE) using Qiskit and Qiskit Aer to investigate phase-estimation precision and the effects of simulated noise.
+
+### Experiments Completed
+- Ran precision experiments using 2, 3, 4, and 5 counting qubits.
+- Compared phase-grid spacing, modal estimates, sample means, and sampling spread.
+- Ran exact-phase regression tests for five phase values.
+- Evaluated a four-counting-qubit experiment using the target phase `0.30`.
+- Compared ideal and illustrative noisy simulation results using 8,192 shots per run.
+
+### Results
+- Target phase: `0.30`.
+- Modal bitstring: `0101`.
+- Estimated phase: `0.3125`.
+- Absolute phase error: `0.0125`.
+- Ideal modal outcome frequency: `87.56%`.
+- Noisy modal outcome frequency: `65.38%`.
+- Ideal sample standard deviation: `0.05957`.
+- Noisy sample standard deviation: `0.15620`.
+
+The results demonstrate how simulated noise can broaden measurement distributions and affect phase estimates.
+
+These results were obtained using Qiskit Aer simulations, not physical quantum hardware. The noisy experiment used an illustrative noise model rather than a calibrated hardware noise model.
+
+See the [Day 8 notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) and [Day 8 README](day-08/README.md).
+
 ## Tools and Technologies
 
 - **Language:** Python
@@ -224,7 +254,10 @@ quantum-computing-200-hours/
 │   ├── Day06_Quantum_Fourier_Transform.ipynb
 │   └── README.md
 └── day-07/
-    ├── Day07_Simons_Algorithm.ipynb
+│   ├── Day07_Simons_Algorithm.ipynb
+│   └── README.md
+└── day-08/
+    ├── day08_Advanced_Quantum_Phase_Estimation.ipynb
     └── README.md
 ```
 
