@@ -29,6 +29,7 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Quantum Algorithms | Deutsch–Jozsa, Bernstein–Vazirani, Grover's search, Simon's algorithm |
 | Fourier and Phase Algorithms | Quantum Fourier Transform (QFT), inverse QFT, Quantum Phase Estimation (QPE) |
 | Practical Programming | Qiskit circuits, simulation, measurement counts, assertions, debugging |
+| Transpilation and Optimization | Optimization levels, circuit depth, gate counts, routing, qubit layouts, basis-gate decomposition |
 | Quantum Hardware | Future experiments on IBM Quantum hardware and hardware-aware circuits |
 | Noise and Reliability | Quantum noise, circuit limitations, introductory error mitigation |
 | Portfolio Development | Jupyter notebooks, experiment summaries, Git, GitHub, technical writing |
@@ -44,7 +45,7 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Day 5 — Grover's Algorithm and Quantum Search | Experiments complete | [Notebook](day-05/Day05_Grovers_Algorithm_Quantum_Search.ipynb) · [README](day-05/README.md) |
 | Day 6 — Quantum Fourier Transform and Quantum Phase Estimation | Complete — ideal simulator checks passed | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
 | Day 7 — Simon's Algorithm | Complete | [Notebook](day-07/Day07_Simons_Algorithm.ipynb) · [README](day-07/README.md) |
-| Day 8 — Advanced Quantum Phase Estimation (QPE) | Complete — precision and phase validation, counting-qubit experiment, and ideal/noisy simulation comparison completed | [Notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) · [README](day-08/README.md) |
+| Day 8 — Advanced Quantum Phase Estimation (QPE) | Complete — precision experiments, exact-phase validation, and ideal/noisy simulation comparison | [Notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) · [README](day-08/README.md) |
 | Day 9 — Transpilation and Backend Optimization | Complete — routing, optimization comparison, basis-gate decomposition, and layout-aware equivalence checks verified | [Notebook](day-09/Day09_Transpilation_Backend_Optimization.ipynb) · [README](day-09/README.md) |
 
 ## Day 1 — Quantum Computing Foundations
@@ -53,13 +54,14 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 
 Introduced the fundamental concepts of quantum computing and began implementing quantum circuits.
 
-Topics include:
+### Topics Covered
+
 - Qubits and quantum states
 - Superposition and measurement
 - Basic circuit construction
 - Running quantum circuits in a notebook environment
 
-See the [Day 1 notebook](day-01/Day01_Quantum_Computing_Foundations.ipynb).
+See the [Day 1 notebook](day-01/Day01_Quantum_Computing_Foundations.ipynb) and [Day 1 README](day-01/README.md).
 
 ## Day 2 — Single-Qubit Gates
 
@@ -67,13 +69,14 @@ See the [Day 1 notebook](day-01/Day01_Quantum_Computing_Foundations.ipynb).
 
 Explored single-qubit operations and their effects on quantum states.
 
-Topics include:
+### Topics Covered
+
 - Quantum gate operations
 - Hadamard transformations
 - State changes and measurement
 - Circuit construction and simulation
 
-See the [Day 2 notebook](day-02/Day02_Single_Qubit_Gates.ipynb).
+See the [Day 2 notebook](day-02/Day02_Single_Qubit_Gates.ipynb) and [Day 2 README](day-02/README.md).
 
 ## Day 3 — Entanglement and Bell States
 
@@ -81,13 +84,14 @@ See the [Day 2 notebook](day-02/Day02_Single_Qubit_Gates.ipynb).
 
 Studied entanglement and created circuits that demonstrate correlations between qubits.
 
-Topics include:
+### Topics Covered
+
 - Bell-state preparation
 - Multi-qubit circuits
 - Entanglement and measurement
 - GHZ-state concepts and related experiments
 
-See the [Day 3 notebook](day-03/Day03_Entanglement_Bell_States.ipynb).
+See the [Day 3 notebook](day-03/Day03_Entanglement_Bell_States.ipynb) and [Day 3 README](day-03/README.md).
 
 ## Day 4 — Deutsch–Jozsa and Bernstein–Vazirani
 
@@ -95,7 +99,7 @@ See the [Day 3 notebook](day-03/Day03_Entanglement_Bell_States.ipynb).
 
 Implemented introductory quantum algorithms to investigate how quantum circuits can reveal properties of functions and recover hidden bit strings.
 
-Recorded ideal Qiskit Aer simulator results:
+### Recorded Simulator Results
 
 | Exercise | Observed Result |
 |---|---|
@@ -104,7 +108,7 @@ Recorded ideal Qiskit Aer simulator results:
 | Deutsch–Jozsa: balanced oracle | `001` |
 | Bernstein–Vazirani: secret string `101` | `101` |
 
-These results came from ideal simulation, not physical quantum hardware.
+These results came from ideal Qiskit Aer simulation, not physical quantum hardware.
 
 See the [Day 4 notebook](day-04/Day04_DJ_and_Bernstein_Vazirani.ipynb) and [Day 4 README](day-04/README.md).
 
@@ -116,14 +120,17 @@ Implemented a two-qubit example of Grover's search algorithm using Qiskit and Qi
 
 Two target states were tested by modifying the oracle while retaining the diffusion operation.
 
-| Experiment | Target State | Recorded Simulator Result |
+### Recorded Simulator Results
+
+| Experiment | Target State | Recorded Result |
 |---|---|---|
 | Experiment 1 | `11` | `{'11': 1000}` |
 | Experiment 2 | `10` | `{'10': 1000}` |
 
 Each experiment used 1,000 simulator shots, and the corresponding assertion passed.
 
-The experiments provided practice with:
+### Topics Practiced
+
 - Oracle construction
 - Grover diffusion
 - Amplitude amplification
@@ -167,7 +174,6 @@ These results were obtained using an ideal simulator, not physical quantum hardw
 
 See the [Day 6 notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) and [Day 6 README](day-06/README.md).
 
-
 ## Day 7 — Simon's Algorithm
 
 **Status: Complete — classical promise, oracle, and hidden-string recovery verified in simulation**
@@ -175,6 +181,7 @@ See the [Day 6 notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) and [Day 
 Implemented Simon's algorithm for the hidden string `110` using Qiskit and Qiskit Aer.
 
 ### Experiments Completed
+
 - Verified the classical Simon promise.
 - Constructed and tested the quantum oracle.
 - Built and simulated the complete quantum circuit.
@@ -182,6 +189,7 @@ Implemented Simon's algorithm for the hidden string `110` using Qiskit and Qiski
 - Recovered the hidden string `110` from the measured equations.
 
 ### Results
+
 - Oracle test: Passed.
 - Simulator shots: 1,024.
 - Parity verification: Passed for all observed outcomes.
@@ -191,20 +199,46 @@ These results were obtained in ideal simulation, not on physical quantum hardwar
 
 See the [Day 7 notebook](day-07/Day07_Simons_Algorithm.ipynb) and [Day 7 README](day-07/README.md).
 
-
 ## Day 8 — Advanced Quantum Phase Estimation (QPE)
 
 **Status: Complete — precision experiments, exact-phase validation, and ideal/noisy simulation comparison completed**
 
-Extended Quantum Phase Estimation (QPE) using Qiskit and Qiskit Aer to investigate phase-estimation precision and the effects of simulated noise.
+Extended Quantum Phase Estimation using Qiskit and Qiskit Aer to investigate phase-estimation precision and the effects of simulated noise.
 
 ### Experiments Completed
+
 - Ran precision experiments using 2, 3, 4, and 5 counting qubits.
 - Compared phase-grid spacing, modal estimates, sample means, and sampling spread.
 - Ran exact-phase regression tests for five phase values.
 - Evaluated a four-counting-qubit experiment using the target phase `0.30`.
 - Compared ideal and illustrative noisy simulation results using 8,192 shots per run.
 
+### Key Results
+
+For the target phase `0.30`, the four-counting-qubit experiment produced:
+
+- **Modal bitstring:** `0101`
+- **Estimated phase:** `0.3125`
+- **Absolute phase error:** `0.0125`
+
+### Ideal-versus-Noisy Simulation Comparison
+
+| Metric | Ideal Simulation | Noisy Simulation |
+|---|---:|---:|
+| Modal bitstring | `0101` | `0101` |
+| Modal outcome frequency | 87.56% | 65.38% |
+| Estimated phase from sample mean | 0.31264 | 0.33760 |
+| Sample standard deviation | 0.05957 | 0.15620 |
+
+The results illustrate how noise can broaden measurement distributions and affect phase estimates.
+
+### Noise and Reproducibility
+
+The ideal and noisy experiments were run in simulation. The noisy simulation used an illustrative noise model, including depolarizing and readout errors. These results are not measurements from real quantum hardware and do not represent a calibrated device noise model.
+
+The notebook records the software versions used. Refer to its simulation setup cells for the exact noise-model parameters.
+
+See the [Day 8 notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) and [Day 8 README](day-08/README.md).
 
 ## Day 9 — Transpilation and Backend Optimization
 
@@ -212,50 +246,56 @@ Extended Quantum Phase Estimation (QPE) using Qiskit and Qiskit Aer to investiga
 
 Explored how Qiskit adapts quantum circuits to optimization settings, hardware connectivity constraints, and a specified gate basis.
 
+### Environment
+
+- Qiskit version: `2.6.0`
+- Platform: Google Colab
+- Circuit: Three-qubit example
+- Connectivity model: Educational linear three-qubit coupling map
+
 ### Experiments Completed
+
 - Built a three-qubit circuit and measured gate count and circuit depth.
 - Compared optimization levels 0, 1, 2, and 3.
 - Created an educational linear coupling map connecting neighboring qubits.
 - Routed the circuit and observed one inserted SWAP gate.
-- Measured routing overhead: gate count increased from 5 to 6 (20%), and depth increased from 4 to 5 (25%).
-- Compared routed circuits at optimization levels 0 and 3; both had 6 gates, depth 5, and one SWAP gate.
+- Measured routing overhead.
+- Compared routed circuits at optimization levels 0 and 3.
 - Inspected initial and final qubit layouts.
 - Transpiled to the specified basis gates `rz`, `sx`, `x`, and `cx`.
 
+### Results
+
+| Experiment | Gate Count | Circuit Depth | SWAP Gates |
+|---|---:|---:|---:|
+| Original circuit | 5 | 4 | 0 |
+| Routed, optimization level 0 | 6 | 5 | 1 |
+| Routed, optimization level 3 | 6 | 5 | 1 |
+| Specified basis-gate circuit | 12 | 9 | 0 native SWAP gates reported |
+
+The basis-gate circuit contained 5 `rz` gates, 2 `sx` gates, and 5 `cx` gates.
+
+Routing increased the gate count from 5 to 6, a 20% increase, and circuit depth from 4 to 5, a 25% increase.
+
 ### Validation Results
+
 - Routed circuit: layout-aware equivalence check returned `True`.
 - Optimization level 0: layout-aware equivalence check returned `True`.
 - Optimization level 3: layout-aware equivalence check returned `True`.
 - Basis-gate circuit: layout-aware equivalence check returned `True`.
 
 ### Key Findings
+
 - Higher optimization levels do not guarantee fewer gates or lower circuit depth.
-- Routing can add gates to satisfy connectivity constraints.
+- Routing can add operations to satisfy connectivity constraints.
 - Basis-gate decomposition can increase circuit size and depth.
-- Layout-aware verification is important when transpilation changes qubit mapping.
+- Qubit layouts can change during transpilation.
+- Raw operator comparisons can be misleading when qubit layouts differ.
+- Layout-aware verification is important when checking transformed circuits.
 
-The basis-gate circuit contained 5 `rz` gates, 2 `sx` gates, and 5 `cx` gates, for 12 listed operations and a circuit depth of 9.
-
-The linear coupling map was an educational model, not a representation of a specific real quantum backend. These experiments used circuit transpilation and operator verification, not physical quantum hardware.
+The connectivity map used here is an educational model, not a representation of a specific real quantum backend. These experiments used circuit transpilation and operator verification, not physical quantum hardware.
 
 See the [Day 9 notebook](day-09/Day09_Transpilation_Backend_Optimization.ipynb) and [Day 9 README](day-09/README.md).
-
-
-### Results
-- Target phase: `0.30`.
-- Modal bitstring: `0101`.
-- Estimated phase: `0.3125`.
-- Absolute phase error: `0.0125`.
-- Ideal modal outcome frequency: `87.56%`.
-- Noisy modal outcome frequency: `65.38%`.
-- Ideal sample standard deviation: `0.05957`.
-- Noisy sample standard deviation: `0.15620`.
-
-The results demonstrate how simulated noise can broaden measurement distributions and affect phase estimates.
-
-These results were obtained using Qiskit Aer simulations, not physical quantum hardware. The noisy experiment used an illustrative noise model rather than a calibrated hardware noise model.
-
-See the [Day 8 notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) and [Day 8 README](day-08/README.md).
 
 ## Tools and Technologies
 
@@ -289,16 +329,15 @@ quantum-computing-200-hours/
 ├── day-06/
 │   ├── Day06_Quantum_Fourier_Transform.ipynb
 │   └── README.md
-└── day-07/
+├── day-07/
 │   ├── Day07_Simons_Algorithm.ipynb
 │   └── README.md
-└── day-08/
-│    ├── day08_Advanced_Quantum_Phase_Estimation.ipynb
-│     └── README.md
+├── day-08/
+│   ├── day08_Advanced_Quantum_Phase_Estimation.ipynb
+│   └── README.md
 └── day-09/
     ├── Day09_Transpilation_Backend_Optimization.ipynb
     └── README.md
-
 ```
 
 ## Project Workflow
@@ -314,20 +353,20 @@ Each milestone follows a consistent workflow:
 
 ## Next Steps
 
-The next milestone is further quantum-algorithm practice, building on the completed Simon's algorithm implementation and earlier QFT and QPE experiments.
+Days 1–9 are documented in the progress tracker. The next learning milestone will follow the existing **Quantum Computing Mastery** roadmap rather than introducing a replacement sequence.
 
-Future milestones may include:
-- Simon's algorithm and hidden-bit-string recovery
-- More advanced quantum algorithms
-- Qiskit transpilation and circuit optimization
-- Running suitable experiments on real quantum hardware
-- Exploring noise and introductory error mitigation
-- Improving the portfolio with reproducible tests and technical explanations
+Future work may include:
 
-These are planned topics, not claims of completed work.
+- Continuing the next scheduled roadmap milestone.
+- Deepening practical Qiskit programming skills.
+- Running suitable experiments on real quantum hardware when available.
+- Exploring quantum noise and introductory error mitigation.
+- Improving the portfolio with reproducible tests and technical explanations.
+
+These are potential future activities, not claims of completed work. The next specific task should be selected from the established learning roadmap.
 
 ## About This Portfolio
 
-This repository documents a hands-on learning journey from quantum-computing foundations to quantum algorithms and phase estimation. It emphasizes practical programming, mathematical validation, transparent reporting, and continuous improvement.
+This repository documents a hands-on learning journey from quantum-computing foundations to quantum algorithms, phase estimation, and circuit transpilation. It emphasizes practical programming, mathematical validation, transparent reporting, and continuous improvement.
 
-The progress tracker distinguishes completed work from planned milestones and identifies ideal simulator results separately from physical quantum hardware experiments.
+The progress tracker distinguishes completed work from planned milestones and identifies simulator results separately from physical quantum hardware experiments.
