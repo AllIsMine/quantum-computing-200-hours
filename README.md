@@ -45,7 +45,7 @@ A structured, hands-on learning portfolio documenting my journey into quantum co
 | Day 6 — Quantum Fourier Transform and Quantum Phase Estimation | Complete — ideal simulator checks passed | [Notebook](day-06/Day06_Quantum_Fourier_Transform.ipynb) · [README](day-06/README.md) |
 | Day 7 — Simon's Algorithm | Complete | [Notebook](day-07/Day07_Simons_Algorithm.ipynb) · [README](day-07/README.md) |
 | Day 8 — Advanced Quantum Phase Estimation (QPE) | Complete — precision and phase validation, counting-qubit experiment, and ideal/noisy simulation comparison completed | [Notebook](day-08/day08_Advanced_Quantum_Phase_Estimation.ipynb) · [README](day-08/README.md) |
-| Day 9 — Transpilation and Backend Optimization | Planned — pending implementation | Not started |
+| Day 9 — Transpilation and Backend Optimization | Complete — routing, optimization comparison, basis-gate decomposition, and layout-aware equivalence checks verified | [Notebook](day-09/Day09_Transpilation_Backend_Optimization.ipynb) · [README](day-09/README.md) |
 
 ## Day 1 — Quantum Computing Foundations
 
@@ -205,6 +205,42 @@ Extended Quantum Phase Estimation (QPE) using Qiskit and Qiskit Aer to investiga
 - Evaluated a four-counting-qubit experiment using the target phase `0.30`.
 - Compared ideal and illustrative noisy simulation results using 8,192 shots per run.
 
+
+## Day 9 — Transpilation and Backend Optimization
+
+**Status: Complete**
+
+Explored how Qiskit adapts quantum circuits to optimization settings, hardware connectivity constraints, and a specified gate basis.
+
+### Experiments Completed
+- Built a three-qubit circuit and measured gate count and circuit depth.
+- Compared optimization levels 0, 1, 2, and 3.
+- Created an educational linear coupling map connecting neighboring qubits.
+- Routed the circuit and observed one inserted SWAP gate.
+- Measured routing overhead: gate count increased from 5 to 6 (20%), and depth increased from 4 to 5 (25%).
+- Compared routed circuits at optimization levels 0 and 3; both had 6 gates, depth 5, and one SWAP gate.
+- Inspected initial and final qubit layouts.
+- Transpiled to the specified basis gates `rz`, `sx`, `x`, and `cx`.
+
+### Validation Results
+- Routed circuit: layout-aware equivalence check returned `True`.
+- Optimization level 0: layout-aware equivalence check returned `True`.
+- Optimization level 3: layout-aware equivalence check returned `True`.
+- Basis-gate circuit: layout-aware equivalence check returned `True`.
+
+### Key Findings
+- Higher optimization levels do not guarantee fewer gates or lower circuit depth.
+- Routing can add gates to satisfy connectivity constraints.
+- Basis-gate decomposition can increase circuit size and depth.
+- Layout-aware verification is important when transpilation changes qubit mapping.
+
+The basis-gate circuit contained 5 `rz` gates, 2 `sx` gates, and 5 `cx` gates, for 12 listed operations and a circuit depth of 9.
+
+The linear coupling map was an educational model, not a representation of a specific real quantum backend. These experiments used circuit transpilation and operator verification, not physical quantum hardware.
+
+See the [Day 9 notebook](day-09/Day09_Transpilation_Backend_Optimization.ipynb) and [Day 9 README](day-09/README.md).
+
+
 ### Results
 - Target phase: `0.30`.
 - Modal bitstring: `0101`.
@@ -257,8 +293,12 @@ quantum-computing-200-hours/
 │   ├── Day07_Simons_Algorithm.ipynb
 │   └── README.md
 └── day-08/
-    ├── day08_Advanced_Quantum_Phase_Estimation.ipynb
+│    ├── day08_Advanced_Quantum_Phase_Estimation.ipynb
+│     └── README.md
+└── day-09/
+    ├── Day09_Transpilation_Backend_Optimization.ipynb
     └── README.md
+
 ```
 
 ## Project Workflow
