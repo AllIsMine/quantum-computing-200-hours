@@ -55,7 +55,7 @@ The notebook records the software versions used. Refer to its simulation setup c
 - [x] Four-counting-qubit phase estimate recorded.
 - [x] Ideal-versus-noisy simulation comparison completed.
 - [x] Qiskit and Qiskit Aer versions recorded.
-- [ ] Final executed notebook and progress note committed to GitHub.
+- [x] Final executed notebook and progress note committed to GitHub.
 
 ## Next Roadmap Task
 
